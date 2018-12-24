@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="storage temporary files online, any files, any time">
+    <meta name="keywords" content="storage temporary files, online storage, anonymous storage">
+    <link rel="stylesheet" href="./css/theme.min.css">
+    <link rel="stylesheet" href="./css/utilities.min.css">
+    <link rel="stylesheet" href="./css/animate.min.css">
+    <link rel="stylesheet" href="./fonts/iconfont.css">
+    <link rel="shortcut icon" href="./favicon.ico">
+    <title>Sesame Online - Anonymous storage your temporary files online</title>
+    <style type="text/css">
+        @media (max-width:767px) {
+            .get_file_btn {
+                width: 100%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+<!--  create ticket modal  -->
+<div class="modal create_ticket_modal" tabindex="-1" role="dialog" style="top: 60px;">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <h3 class="text-purple-darker">Save download link <i class="iconfont icon-lianjie"></i></h3>
+                <form>
+                    <div class="form-group">
+                        <label for="ticket">Ticket</label>
+                        <input type="text" name="ticket" id="ticket" class="form-control" placeholder="Please enter what you want">
+                        <p class="help-block">2~12 Characters, Can not be all whitespace</p>
+                    </div>
+                    <div class="form-group">
+                        <label for="token">Token (Not necessary)</label>
+                        <input type="password" name="token" id="token" class="form-control" placeholder="Enter token">
+                        <p class="help-block">Used to protect download link(4~18 Characters, Allow: letters, numbers, _)</p>
+                    </div>
+
+                    <button type="button" class="btn btn-danger t_modal_cancelBtn">Cancel</button>
+                    <button type="button" class="btn btn-info t_modal_saveBtn">Save</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!---->
+
+
+
+
+<!-- about -->
+
+<div class="modal about_content" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close about_content_cBtn"><span>&times;</span></button>
+                <h4 class="modal-title">About this project</h4>
+            </div>
+            <div class="modal-body">
+                <h3>这是一个演示站，数据丢失自行负责！</h3>
+                <p>Source code 👉 <a href="https://github.com/SiGool/SesameOnline">SesameOnline</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!---->
+
+
+
+
+<div class="container mb-24">
+
+    <!-- navbar -->
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapser">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <a class="navbar-brand align-middle" href="/">
+                    <img alt="Sesame Online" src="./images/sesameol_logo.png" height="32" style="display: inline-block;">
+                </a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="navbar-collapser">
+                <form class="navbar-form navbar-left">
+                    <div class="form-group">
+                        <input type="text" name="ticket" class="form-control ticket_usrInput" placeholder="Input your ticket">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" name="token" class="form-control token_usrInput" placeholder="Token (If there is)">
+                    </div>
+                    <button type="button" class="btn btn-primary get_file_btn">Download</button>
+                </form>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="javascript:void(0);" class="faq_link">FAQ</a></li>
+                    <li><a href="javascript:void(0);" class="about_link">About</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+<!---->
+
+    <section class="mt-12">
+
+
+        <!-- faq -->
+        <div class="faq_content inline-block relative" style="display: none;">
+            <a href="javascript:void(0);" class="absolute pin-t pin-r faq_content_cBtn" style="color: #D9534F;">✘</a>
+
+            <h5>How it works?</h5>
+            <p>
+                It will help you upload your file to <a class="underline" href="https://openload.co">openload</a>, and then it will<br />
+                receive your download link from openload. After setting a ticket<br />
+                for your download link, your download link will be saved <br />
+                automatically. Next time just use the ticket to download your file.
+            </p>
+
+            <br />
+            <h5>What kinds of files and what's the maximum file size can you upload?</h5>
+            <p>
+                You should refer to <a href="https://openload.co/faq" class="underline">openload&FAQ</a>.
+            </p>
+
+            <br>
+            <h5>how long your files will be saved?</h5>
+            <p>
+                No! your file are saved at least 30 days on openload. This program <br />
+                only saves your download link about 10 days. If you still want to <br />
+                download after 10 days, you should remember download link yourself.
+            </p>
+
+            <br />
+            <h5>Delete your ticket?</h5>
+            <p>You don't need. It will be automatically deleted after 10 days.</p>
+
+            <br>
+            <h5>Contact me?</h5>
+            <p>sigool@sina.com</p>
+
+
+            <br />
+            <br />
+            <br />
+        </div>
+        <!---->
+
+
+        <div class="jumbotron">
+            <h1>
+                Upload to
+                <a href="https://openload.co"><img src="./images/openload_logo.png" alt="openload" style="width: 144px;"></a>
+            </h1>
+            <p>Set a ticket for your upload file</p>
+            <p>Automatically save your download link</p>
+            <p>Storage your ticket maximum time: 10 Days</p>
+            <p>Use the ticket to download your file</p>
+        </div>
+
+        <!-- upload area -->
+        <div class="mt-12">
+            <h3 class="text-purple-darker"><i class="iconfont icon-choose1"></i> Select a file</h3>
+            <form>
+                <div class="input-group input-group-lg">
+
+                                        <!-- display: none -->
+                                        <input type="file" class="file_selector hidden">
+                                        <!---->
+
+                    <input type="text" class="form-control filePath_input" readonly placeholder="Drag here directly or click the Browse button">
+                    <span class="input-group-btn">
+                        <a href="javascript:void(0);" class="btn btn-default browse_file_btn">
+                            <i class="iconfont icon-eye"></i> Browse
+                        </a>
+                    </span>
+                </div>
+
+                <div class="upload_progress mt-6 mb-12">
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" style="width: 0;"></div>
+                    </div>
+                </div>
+
+                <p class="help-block text-right"><a href="https://openload.co/faq" target="_blank">📕 Upload details</a></p>
+                <button type="button" class="btn btn-warning w-full upload_file_btn" style="border-radius: 4px;">
+                    <i class="iconfont icon-cloud-upload"></i> Upload Now
+                </button>
+            </form>
+        </div>
+    </section>
+</div>
+
+<hr>
+
+<!--footer-->
+<footer class="text-center pb-4">
+    Created by SiGool, 2018 / <a href="https://github.com/SiGool/SesameOnline" target="_blank"><i class="iconfont icon-githublogo"> Code licensed MIT</i></a>
+</footer>
+
+<script src="./js/jquery.min.js"></script>
+<script src="./js/bootstrap.min.js"></script>
+<script src="./js/bootstrap-notify.min.js"></script>
+<script src="./js/upload.js"></script>
+<script src="./js/setTicket.js"></script>
+<script src="./js/download.js"></script>
+<script type="text/javascript">
+
+    var $faqContent = $('.faq_content'),
+        $aboutContent = $('.about_content');
+
+    $('.faq_link').click(function() {
+        $faqContent.fadeIn(2200);
+        return false;
+    });
+
+    $('.faq_content_cBtn').click(function() {
+        $faqContent.hide();
+    });
+
+    // about
+    $('.about_link').click(function() {
+        $aboutContent.slideDown(800);
+        return false;
+    });
+
+    $('.about_content_cBtn').click(function() {
+        $aboutContent.hide();
+    });
+</script>
+</body>
+</html>
